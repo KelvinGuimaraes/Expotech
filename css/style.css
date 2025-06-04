@@ -1821,6 +1821,13 @@ border: 2px solid #fff;
 }
 .team-thumb{margin-bottom: 5px;}
 
+.team-thumb img {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
 .team-info {
 	margin-left: 15px;
 	margin-right: 20px;
@@ -1933,6 +1940,7 @@ border: 2px solid #ff007a;
 	top: 54%;
 }
 /* 12. counter */
+
 .counter-area{
 	position:relative;
 }
@@ -1987,7 +1995,7 @@ border: 2px solid #ff007a;
 	font-weight: bold;
 }
 .counter small {
-	font-size: 80px;
+	font-size: 36px;
 	font-weight: bold;
 	color: #fff;
 	line-height: 1;
