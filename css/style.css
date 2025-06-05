@@ -394,6 +394,28 @@ label {
   margin-bottom: 0;
   line-height: 1.5;
 }
+.main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Centralizado em telas grandes */
+@media (min-width: 992px) {
+  .main-menu {
+    justify-content: center;
+    margin-right: 350px;
+  }
+}
+
+/* Alinhado à direita em telas pequenas */
+@media (max-width: 991px) {
+  .main-menu {
+    justify-content: flex-end;
+  }
+}
+
 .main-menu ul li {
   display: inline-block;
   margin-left: 25px;
