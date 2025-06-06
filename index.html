@@ -215,10 +215,13 @@
               </div>
             </div>
             <div class="col-lg-6">
-              <div
-                class="s-video-wrap"
-                style="background-image: url(img/video_bg_2.jpg)"
-              ></div>
+              <div class="s-video-wrap" style="background-image: url(img/video_bg_2.jpeg);">
+                <div class="s-video-content">
+                  <a href="https://www.youtube.com/watch?v=gT-lns_MNeI" class="popup-video mb-50">
+                    <i class="fas fa-play"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1948,10 +1951,7 @@
                     </div>
                   </div>
                   <!-- row loop -->
-                  <div
-                    class="col-lg-12 justify-content-center text-center"
-                    id="btn-mais-four"
-                  >
+                  <div class="col-lg-12 justify-content-center text-center" id="btn-mais-four">
                     <a
                       href="#extra-eventos-five"
                       class="btn mt-20 mr-10"
@@ -2236,7 +2236,7 @@
             </div>
             <div class="col-lg-6 grid-item">
               <div class="portfolio">
-                <img src="img/gallery_4.jpg" alt="gallery_1" />
+                <img src="img/gallery_4.jpeg" alt="gallery_1" />
               </div>
             </div>
             <div class="col-lg-6 grid-item">
@@ -2353,5 +2353,24 @@
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/imagesloaded.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.popup-video').magnificPopup({
+          type: 'iframe'
+        });
+      });
+    </script>
+    <script>
+      $(window).on('load', function() {
+        // Inicializa o Isotope após todas as imagens carregarem
+        $('.grid').isotope({
+          itemSelector: '.grid-item',
+          percentPosition: true,
+          masonry: {
+            columnWidth: '.grid-item'
+          }
+        });
+      });
+    </script>
   </body>
 </html>

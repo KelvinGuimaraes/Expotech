@@ -1644,12 +1644,15 @@ label {
 .s-video-wrap {
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 320px;
   height: 550px;
   display: flex;
   align-items: flex-end;
   margin-top: 55px;
   position: relative;
-  border-radius: 30px;
+  border-radius: 16px;
 }
 .s-video-wrap::before {
   position: absolute;
@@ -3470,6 +3473,17 @@ p.checkout-coupon input[type="text"] {
   float: right;
   width: 70%;
 }
+/* Centraliza os projetos na área de eventos */
+#event .row.mb-30 {
+  justify-content: center !important;
+  display: flex;
+}
+#event .col-lg-10 {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+
 .event .btn {
   background: #ff007a;
 }
@@ -3490,38 +3504,87 @@ p.checkout-coupon input[type="text"] {
   font-size: 12px;
   margin-right: 16px;
 }
+
+/* Mobile: abas em lista, alinhadas e proporcionais */
+@media (max-width: 767px) {
+  .nav.nav-tabs.nav-fill {
+    flex-direction: column !important;
+    display: flex;
+  }
+  .nav.nav-tabs.nav-fill .nav-item,
+  .nav.nav-tabs.nav-fill .nav-link {
+    white-space: nowrap;
+    margin-bottom: 12px;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    border-radius: 0 !important;
+    margin-bottom: 4px;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 48px;
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+  .nav-content strong {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem;
+    margin: 0;
+    margin-left: 10px;
+    max-width: 100%;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .nav.nav-tabs.nav-fill img {
+    margin: 0 10px 0 0;
+    max-width: 24px;
+  }
+}
+
+/* Abas de disciplinas proporcionais e alinhadas */
 .nav.nav-tabs.nav-fill .nav-item {
   flex: 1 1 0;
-  min-width: 150px;
-  max-width: 220px;
+  min-width: 120px;
+  max-width: 200px;
   text-align: center;
   padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav.nav-tabs.nav-fill .nav-link {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   height: 100%;
-  min-height: 80px;
+  min-height: 60px;
   font-size: 1rem;
   white-space: normal;
+  padding: 8px 10px;
+  width: 100%;
+  border-radius: 8px !important;
+}
+
+.nav.nav-tabs.nav-fill img {
+  max-width: 28px;
+  height: auto;
+  margin: 0 8px 0 0;
 }
 
 .nav-content strong {
   font-size: 1rem;
   display: block;
-  margin-top: 5px;
+  margin: 0;
   word-break: break-word;
-  max-width: 180px;
+  max-width: 120px;
+  text-align: left;
 }
 
-.nav.nav-tabs.nav-fill img {
-  max-width: 32px;
-  height: auto;
-  margin: 0 auto 4px auto;
-}
 .event .nav-fill .nav-item text-t i {
   margin-right: 10px;
 }
