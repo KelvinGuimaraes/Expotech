@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>ExpoTech - Unifavip 2025</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon copy.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="css/dripicons.css" />
+    <link rel="stylesheet" href="css/slick.css" />
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/cadastros.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header id="home" class="header-area">
+        <div id="header-sticky" class="menu-area">
+            <div class="container">
+                <div class="second-menu">
+                    <div class="row align-items-center">
+                        <div class="col-xl-3 col-lg-3">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="./img/expotech-logo-6x1.png" alt="logo" style="width: 200px" />
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xl-9 col-lg-9">
+                            <div class="responsive">
+                                <i class="icon dripicons-align-right"></i>
+                            </div>
+                            <div class="main-menu text-right text-xl-center">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li class="active has-sub">
+                                            <a href="index.html">Home +</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- main-area -->
+    <main>
+        <!-- slider-area -->
+        <section id="parallax"
+            class="slider-area slider-bg second-slider-bg slider-bg2 d-flex align-items-center justify-content-center fix"
+            style="background-image: url(img/home_2_slider_img.jpg)">
+            <div class="slider-shape ss-one layer" data-depth="0.10">
+                <img src="img/doddle_6.png" alt="shape" />
+            </div>
+            <div class="slider-shape ss-three layer" data-depth="0.40">
+                <img src="img/doddle_9.png" alt="shape" />
+            </div>
+            <div class="slider-shape ss-four layer" data-depth="0.60">
+                <img src="img/doddle_7.png" alt="shape" />
+            </div>
+            <div class="slider-active">
+                <div class="single-slider">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <div class="slider-content second-slider-content">
+                                    <div class="form-area">
+                                        <h2 style="font-size: 3rem;">Cadastro de Projetos</h2>
+                                        <!-- form-area -->
+                                        <form id="form-projeto">
+                                            <p style="color: black;">Nome do Projeto:</p>
+                                            <input name="nome" placeholder="Nome do Projeto" required />
+                                            <p style="color: black;">Disciplina:</p>
+                                            <select name="disciplina">
+                                                <option value="Informática">Microcontroladores</option>
+                                                <option value="Design">Tópicos em Big Data</option>
+                                                <option value="Engenharia">Dev Rápido de App</option>
+                                                <option value="Outros">Prog. Mobile</option>
+                                                <option value="Outros">Aplic. de Cloud, IOT</option>
+                                            </select>
+                                            <p style="color: black;">Descrição do Projeto:</p>
+                                            <textarea name="descricao" placeholder="Descrição"></textarea>
+                                            <p style="color: black;">Integrantes:</p>
+                                            <input name="integrantes"
+                                                placeholder="(nomes separados por vírgula)" />
+                                            <button type="submit">Enviar</button>
+                                        </form>
+                                        <!-- form-area-end -->
+                                        <!-- logos-area -->
+                                        <div class="logos-area">
+                                            <div class="logo mb-35">
+                                                <a href="#">
+                                                    <img src="img/logo/Unifavip.PNG" alt="" style="width: 150px" />
+                                                </a>
+                                                <a href="#">
+                                                    <img src="img/expotech-logo-6x1.png" alt="" style="width: 150px" />
+                                                </a>
+                                                <a href="#">
+                                                    <img src="img/logo/Cursos.PNG" alt="" style="width: 150px" />
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- logos-area-end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- slider-area-end -->
+    </main>
+    <!-- main-area-end -->
+
+    <!-- JS here -->
+    <script>
+        function mostrarMaisEventos(id, btn) {
+            var extra = document.getElementById(id);
+            if (extra) {
+                extra.style.display = "block";
+                btn.style.display = "none"; // Esconde o botão após o clique
+            }
+        }
+    </script>
+    <script type="module" src="js/cadastroProjeto/firebase-init.js"></script>
+    <script type="module" src="js/cadastroProjeto/projetos.js"></script>
+    <script type="module" src="js/cadastroProjeto/cadastro.js"></script>
+
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/paroller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/element-in-view.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".popup-video").magnificPopup({
+                type: "iframe",
+            });
+        });
+    </script>
+    <script>
+        $(window).on("load", function () {
+            // Inicializa o Isotope após todas as imagens carregarem
+            $(".grid").isotope({
+                itemSelector: ".grid-item",
+                percentPosition: true,
+                masonry: {
+                    columnWidth: ".grid-item",
+                },
+            });
+        });
+    </script>
+</body>
+
+</html>
