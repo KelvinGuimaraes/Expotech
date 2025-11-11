@@ -49,9 +49,12 @@
                                 <nav id="mobile-menu">
                                     <ul>
                                         <li class="active has-sub">
-                                            <a href="index.html">Home +</a>
+                                            <a href="./index.html" style="pointer-events: all;">Home +</a>
                                         </li>
-                                    </ul>
+                                        <li class="has-sub">
+                                            <a href="#form" style="pointer-events: all;">Formulário</a>
+                                        </li>
+                                    </ul>   
                                 </nav>
                             </div>
                         </div>
@@ -83,7 +86,7 @@
                         <div class="row">
                             <div class="col-12 text-center">
                                 <div class="slider-content second-slider-content">
-                                    <div class="form-area">
+                                    <div id="form" class="form-area">
                                         <h2 style="font-size: 3rem;">Cadastro de Projetos</h2>
                                         <!-- form-area -->
                                         <form id="form-projeto">
@@ -93,8 +96,8 @@
                                             <select name="disciplina">
                                                 <option value="Informática">Microcontroladores</option>
                                                 <option value="Design">Tópicos em Big Data</option>
-                                                <option value="Engenharia">Dev Rápido de App</option>
-                                                <option value="Outros">Prog. Mobile</option>
+                                                <option value="Engenharia">D.M. em Android</option>
+                                                <!--option value="Outros">Prog. Mobile</option -->
                                                 <option value="Outros">Aplic. de Cloud, IOT</option>
                                             </select>
                                             <p style="color: black;">Descrição do Projeto:</p>
@@ -105,6 +108,36 @@
                                             <button type="submit">Enviar</button>
                                         </form>
                                         <!-- form-area-end -->
+                                         
+                                        <script>
+                                            document.getElementById('form-projeto').addEventListener('submit', async (e) => {
+                                            e.preventDefault();
+                                            const form = e.target;
+                                            const data = {
+                                                nome: form.nome.value.trim(),
+                                                descricao: form.descricao.value.trim(),
+                                                integrantes: form.integrantes.value.trim(),
+                                                disciplina: form.disciplina.value
+                                            };
+
+                                            try {
+                                                const resp = await fetch("http://localhost:4000/api/projetos", {
+                                                method: "POST",
+                                                headers: { "Content-Type": "application/json" },
+                                                body: JSON.stringify(data)
+                                                });
+
+                                                if (!resp.ok) throw new Error("Erro ao enviar");
+                                                const projeto = await resp.json();
+                                                // redireciona para a página de listagem
+                                                window.location.href = "index.html";
+                                            } catch (err) {
+                                                console.error(err);
+                                                alert("Erro ao enviar projeto.");
+                                            }
+                                            });
+                                        </script>
+
                                         <!-- logos-area -->
                                         <div class="logos-area">
                                             <div class="logo mb-35">
