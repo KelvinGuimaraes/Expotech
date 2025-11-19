@@ -3505,50 +3505,9 @@ p.checkout-coupon input[type="text"] {
   margin-right: 16px;
 }
 
-/* Mobile: abas em lista, alinhadas e proporcionais */
-@media (max-width: 767px) {
-  .nav.nav-tabs.nav-fill {
-    flex-direction: column !important;
-    display: flex;
-  }
-  .nav.nav-tabs.nav-fill .nav-item,
-  .nav.nav-tabs.nav-fill .nav-link {
-    white-space: nowrap;
-    margin-bottom: 12px;
-    width: 100%;
-    max-width: 100%;
-    text-align: left;
-    border-radius: 0 !important;
-    margin-bottom: 4px;
-    justify-content: flex-start;
-    align-items: center;
-    min-height: 48px;
-    padding: 12px 16px;
-    font-size: 1rem;
-  }
-  .nav-content strong {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 0.85rem;
-    margin: 0;
-    margin-left: 10px;
-    max-width: 100%;
-    text-align: left;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-  .nav.nav-tabs.nav-fill img {
-    margin: 0 10px 0 0;
-    max-width: 24px;
-  }
-}
-
 /* Abas de disciplinas proporcionais e alinhadas */
 .nav.nav-tabs.nav-fill .nav-item {
   flex: 1 1 0;
-  min-width: 120px;
-  max-width: 200px;
   text-align: center;
   padding: 10px 0;
   display: flex;
@@ -6344,4 +6303,44 @@ pre cite {
 .admin-bar .sticky-menu {
   top: 32px;
   margin-top: 0;
+}
+
+/* Mobile: abas em lista, alinhadas e proporcionais */
+@media (max-width: 767px) {
+  .nav.nav-tabs.nav-fill {
+    flex-direction: column !important;
+    display: flex;
+    margin-top: -50px;
+    margin-bottom: -50px;
+  }
+  .nav.nav-tabs.nav-fill .nav-item,
+  .nav.nav-tabs.nav-fill .nav-link {
+    white-space: nowrap;
+    margin-bottom: 20px;
+    max-width: 340px;
+    text-align: left;
+    border-radius: 0 !important;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 48px;
+    padding: 12px 16px;
+    font-size: 1rem;
+  }
+  .nav-content strong {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.85rem;
+    white-space: nowarp;
+    max-width: 340px;
+    margin: 0;
+    margin-left: 10px;
+    text-align: left;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  .nav.nav-tabs.nav-fill img {
+    margin: 0 10px 0 0;
+    max-width: 24px;
+  }
 }
